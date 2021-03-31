@@ -1,6 +1,6 @@
 import React from "react";
-import ProductList from "../ProductList/ProductList.component";
-import "./homepage.component.css";
+import ProductList from "../../components/ProductList/ProductList.component";
+import "./home.page.css";
 
 const HomePage = () => (
   <div className="homepage">
