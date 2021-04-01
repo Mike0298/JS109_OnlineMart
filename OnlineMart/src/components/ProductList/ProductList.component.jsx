@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import CategoryList from "../Category/Category.component";
+
 // redux
 import { connect } from "react-redux";
 import { getShop } from "../../redux/actions/shopAction";
@@ -12,7 +14,19 @@ class ProductList extends Component {
   render() {
     const { shop, loading } = this.props.shop;
 
-    let shopLoaded = !loading ? <div>Loaded</div> : <div>Loading</div>;
+    let shopLoaded = !loading ? (
+      <div>
+        {Object.keys(shop).map((value, index) => (
+          <CategoryList
+            key={index}
+            name={value}
+            category={shop[Object.keys(shop)[index]]}
+          />
+        ))}
+      </div>
+    ) : (
+      <div>Loading</div>
+    );
 
     return shopLoaded;
   }
