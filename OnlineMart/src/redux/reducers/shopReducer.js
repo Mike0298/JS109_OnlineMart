@@ -15,8 +15,8 @@ export default function (state = initialState, action) {
       };
     case LOADING_SHOP:
       return {
-        ...state,
         loading: true,
+        shop: {},
       };
     default:
       return state;
