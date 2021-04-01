@@ -41,7 +41,7 @@
               'product_id' => $product_id,
               'product_name' => $product_name,
               'unit_price' => $unit_price,
-              'unit_quantiry' => $unit_quantity,
+              'unit_quantity' => $unit_quantity,
               'in_stock' => $in_stock,
               'category' => $category,
               'sub_category' => $sub_category
