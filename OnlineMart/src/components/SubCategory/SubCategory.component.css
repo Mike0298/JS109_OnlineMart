@@ -17,12 +17,22 @@
   transform: translateY(-50%);
 }
 
-.sub-category p {
-  font-size: 1.4rem;
+.sub-category .sub-category-name {
+  font-size: 1.6rem;
   color: rgba(255, 255, 255, 0.6);
   padding: 2rem;
 }
 
-.category-item:target .sub-category {
-  max-height: 20rem;
+.sub-category .sub-category-items {
+  padding-left: 2rem;
+}
+
+.sub-category .sub-category-items .card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sub-category-link .ion-md-remove {
+  display: none;
 }

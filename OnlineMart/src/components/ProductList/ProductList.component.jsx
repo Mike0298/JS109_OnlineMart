@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import CategoryList from "../Category/Category.component";
 
-import "./ProductList.component.css"
+import "./ProductList.component.css";
 
 // redux
 import { connect } from "react-redux";
@@ -28,7 +28,9 @@ class ProductList extends Component {
         ))}
       </div>
     ) : (
-      <div class="lds-dual-ring"></div>
+      <div className="loading-icon">
+        <div class="lds-dual-ring"></div>
+      </div>
     );
 
     return shopLoaded;
