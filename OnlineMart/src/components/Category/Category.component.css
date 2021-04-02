@@ -60,3 +60,11 @@
 .category-item:target .sub-category {
   max-height: 20rem;
 }
+
+.category-item:target .category-link .ion-md-add {
+  display: none;
+}
+
+.category-item:target .category-link .ion-md-remove {
+  display: block;
+}

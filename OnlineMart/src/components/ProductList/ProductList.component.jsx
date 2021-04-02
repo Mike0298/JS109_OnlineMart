@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import CategoryList from "../Category/Category.component";
 
+import "./ProductList.component.css";
+
 // redux
 import { connect } from "react-redux";
 import { getShop } from "../../redux/actions/shopAction";
@@ -26,7 +28,7 @@ class ProductList extends Component {
         ))}
       </div>
     ) : (
-      <div>Loading</div>
+      <div class="lds-dual-ring"></div>
     );
 
     return shopLoaded;

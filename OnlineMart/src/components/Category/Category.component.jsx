@@ -9,20 +9,14 @@ const Category = ({ id, name, category }) => (
       <i className="icon ion-md-add"></i>
       <i className="icon ion-md-remove"></i>
     </a>
-    <div className="sub-category">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto,
-        voluptatem?
-      </p>
-    </div>
-
-    {/* {Object.keys(category).map((value, index) => (
+    {Object.keys(category).map((value, index) => (
       <SubCategory
         key={index}
+        id={index}
         name={value}
         subcategory={category[Object.keys(category)[index]]}
       />
-    ))} */}
+    ))}
   </div>
 );
 
