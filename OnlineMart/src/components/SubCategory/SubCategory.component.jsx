@@ -1,6 +1,8 @@
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard.component";
 
+import "./SubCategory.component.css";
+
 const SubCategory = ({ id, name, subcategory }) => (
   <div className="sub-category" id={"sub-category" + id}>
     <p>{name}</p>
