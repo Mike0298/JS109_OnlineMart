@@ -17,6 +17,7 @@
 .homepage .left {
   width: 70%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -30,11 +31,11 @@
 .item-view,
 .cart-view {
   flex: 1;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 
 .homepage .container {
-  max-width: 100rem;
+  max-width: 250rem;
   margin: 0 auto;
   padding: 0 1.5rem;
 }

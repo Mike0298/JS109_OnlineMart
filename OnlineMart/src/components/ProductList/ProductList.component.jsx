@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import CategoryList from "../Category/Category.component";
 
-import "./ProductList.component.css";
+import "./ProductList.component.css"
 
 // redux
 import { connect } from "react-redux";
