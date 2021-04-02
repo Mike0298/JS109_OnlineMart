@@ -5,7 +5,7 @@ import "./home.page.css";
 
 const HomePage = () => (
   <div className="homepage">
-    <div className="left">
+    <div className="left container">
       <ProductList />
     </div>
     <div className="right">

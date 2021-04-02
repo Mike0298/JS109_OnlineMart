@@ -15,10 +15,11 @@ class ProductList extends Component {
     const { shop, loading } = this.props.shop;
 
     let shopLoaded = !loading ? (
-      <div>
+      <div className="category">
         {Object.keys(shop).map((value, index) => (
           <CategoryList
             key={index}
+            id={index}
             name={value}
             category={shop[Object.keys(shop)[index]]}
           />

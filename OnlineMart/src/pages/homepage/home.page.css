@@ -1,13 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 .homepage {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background-color: #3c4053;
 }
 
 .homepage .left {
   width: 70%;
-  margin: 0;
-  padding: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .homepage .right {
@@ -20,4 +31,10 @@
 .cart-view {
   flex: 1;
   min-height: 50vh;
+}
+
+.homepage .container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
