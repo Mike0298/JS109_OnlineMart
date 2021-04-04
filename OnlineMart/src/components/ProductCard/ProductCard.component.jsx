@@ -24,7 +24,7 @@ export class ProductCard extends Component {
           </div>
         </div>
         <div className="view">
-          <button onClick={() => this.showItem(this.props)}>View &gt;</button>
+          <button onClick={() => this.showItem(this.props)}>View</button>
         </div>
       </div>
     );

@@ -3,10 +3,16 @@ import React, { Component } from "react";
 //redux
 import { connect } from "react-redux";
 import { deselectItem } from "../../redux/actions/itemAction";
+import { addItem } from "../../redux/actions/cartAction";
 
 import "./ItemView.component.css";
 
 export class ItemView extends Component {
+  addItemToCart(itemToAdd, props) {
+    let { addItem } = props;
+    addItem(itemToAdd);
+  }
+
   render() {
     const { itemSelected, item } = this.props.item;
 
@@ -17,6 +23,13 @@ export class ItemView extends Component {
       unit_price,
       unit_quantity,
     } = item;
+
+    const itemToAdd = {
+      id: product_id,
+      name: product_name,
+      price: unit_price,
+      unit_quantity: unit_quantity,
+    };
 
     let itemSelect = itemSelected ? (
       <div className="view-container">
@@ -46,7 +59,12 @@ export class ItemView extends Component {
         <div className="view-stock">
           {in_stock <= 0 ? <p> Out of stock </p> : <p>In Stock</p>}
         </div>
-        <button disabled={in_stock <= 0 ? true : false}>Add to Cart</button>
+        <button
+          onClick={() => this.addItemToCart(itemToAdd, this.props)}
+          disabled={in_stock <= 0 ? true : false}
+        >
+          Add to Cart
+        </button>
       </div>
     ) : (
       <div className="view-empty">
@@ -69,5 +87,6 @@ const mapStateToProps = (state) => ({
 
 const mapActionToProps = {
   deselectItem,
+  addItem,
 };
 export default connect(mapStateToProps, mapActionToProps)(ItemView);

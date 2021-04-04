@@ -29,7 +29,7 @@ class ProductList extends Component {
       </div>
     ) : (
       <div className="loading-icon">
-        <div class="lds-dual-ring"></div>
+        <div className="lds-dual-ring"></div>
       </div>
     );
 
