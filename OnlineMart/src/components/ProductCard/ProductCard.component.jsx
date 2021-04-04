@@ -12,15 +12,7 @@ export class ProductCard extends Component {
   }
 
   render() {
-    const {
-      category,
-      in_stock,
-      product_id,
-      product_name,
-      sub_category,
-      unit_price,
-      unit_quantity,
-    } = this.props;
+    const { product_name, unit_price, unit_quantity } = this.props;
 
     return (
       <div className="product-card">
@@ -32,7 +24,7 @@ export class ProductCard extends Component {
           </div>
         </div>
         <div className="view">
-          <button onClick={() => this.showItem(this.props)}>View</button>
+          <button onClick={() => this.showItem(this.props)}>View &gt;</button>
         </div>
       </div>
     );

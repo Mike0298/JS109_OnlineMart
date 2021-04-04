@@ -17,7 +17,7 @@
 }
 
 .product-card .desc .name {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -37,6 +37,7 @@
 }
 
 .product-card .view button {
+  font-size: 1.5rem;
   margin-left: 1rem;
   border: none;
   background-color: transparent;
