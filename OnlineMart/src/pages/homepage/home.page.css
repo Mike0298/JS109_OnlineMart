@@ -26,12 +26,12 @@
 .homepage .right {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  width: 30%;
 }
 
 .item-view,
 .cart-view {
-  flex: 1;
+  height: 50%;
 }
 
 .homepage .container {
