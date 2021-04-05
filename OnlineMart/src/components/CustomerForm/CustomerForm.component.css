@@ -1,0 +1,23 @@
+.customer-form {
+  padding: 0.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.customer-form .back-to-shop button {
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #283042;
+  border-radius: 4rem;
+  padding: 1rem;
+  border: 0.2rem solid #212838;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.customer-form .form-container {
+  margin-top: 1rem;
+  width: 100%;
+  height: 85%;
+  background-color: #212838;
+}

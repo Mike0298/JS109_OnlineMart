@@ -1,0 +1,25 @@
+.customer-cart-container {
+  background-color: #283042;
+  width: 100%;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  color: #fff;
+  height: 95%;
+  max-height: 97%;
+}
+
+.customer-cart-container .customer-cart-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.customer-cart-container .customer-total-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin: 0.5rem;
+  padding-top: 2rem;
+}

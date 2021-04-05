@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import { clearCart } from "../../redux/actions/cartAction";
+import { Link } from "react-router-dom";
 
 import CartItems from "../CartItems/CartItems.component";
 
@@ -30,8 +31,19 @@ export class CartView extends Component {
           <p>Total:</p>
           <p>${this.totalPrice(cartItems)}</p>
         </div>
-        <button onClick={() => clearCart()}>Clear Cart</button>
-        <button>Process To Checkout</button>
+        <div className="cart-button">
+          <button className="cart-button-clear" onClick={() => clearCart()}>
+            Clear Cart
+          </button>
+          <button
+            disabled={cartItems.length === 0}
+            className="cart-button-checkout"
+          >
+            <Link className="link" to="/checkout">
+              Process To Checkout
+            </Link>
+          </button>
+        </div>
       </div>
     );
   }
