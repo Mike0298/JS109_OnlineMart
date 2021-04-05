@@ -13,6 +13,14 @@
   text-align: center;
 }
 
+.cart-item .cart-item-name {
+  text-align: left;
+}
+
+.cart-item .cart-item-name .cart-item-name-quantity {
+  font-size: 1.1rem;
+}
+
 .cart-item .cart-item-quantity {
   display: flex;
   flex-direction: row;

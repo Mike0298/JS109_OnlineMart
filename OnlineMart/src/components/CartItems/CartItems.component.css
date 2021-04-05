@@ -1,6 +1,7 @@
 .cart-items {
   background-color: #212838;
   height: 75%;
+  max-height: 75%;
   overflow-y: scroll;
 }
 

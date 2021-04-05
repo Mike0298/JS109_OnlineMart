@@ -32,7 +32,7 @@ export class CartItem extends Component {
       <div className="cart-item">
         <div className="cart-item-name">
           <p>{name}</p>
-          <p>{unit_quantity}</p>
+          <p className="cart-item-name-quantity">{unit_quantity}</p>
         </div>
         <div className="cart-item-quantity">
           <button onClick={() => removeItem(item)} className="cart-item-icon">
