@@ -33,7 +33,7 @@
 }
 
 .category-item:target .sub-category {
-  max-height: 30rem;
+  max-height: 50rem;
 }
 
 .category-item:target .category-link .ion-md-add {

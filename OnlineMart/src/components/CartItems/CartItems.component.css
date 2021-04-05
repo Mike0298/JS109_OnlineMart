@@ -1,0 +1,26 @@
+.cart-items {
+  background-color: #212838;
+  height: 75%;
+  overflow-y: scroll;
+}
+
+.cart-items .cart-items-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px white solid;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.cart-items .cart-items-header > * {
+  width: 25%;
+  text-align: center;
+}
+
+.cart-item-icon {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
