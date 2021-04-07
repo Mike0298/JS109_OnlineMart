@@ -29,4 +29,22 @@
             $stmt->execute();
             return $stmt;
         }
+
+        public function reduceStock($quantity) {
+            $query = 'UPDATE ' . $this->table . '
+                                SET in_stock = in_stock - ' . $quantity . ' 
+                                WHERE product_id = :product_id';
+
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':product_id', $this->product_id);
+
+            if($stmt->execute()) {
+                return true;
+            }
+
+            printf("Error: %s.\n", $stmt->error);
+    
+            return false;
+        }
     }
