@@ -33,9 +33,6 @@ export class CustomerForm extends Component {
   render() {
     return (
       <div className="customer-form">
-        <Link className="back-to-shop" to="/">
-          <button>Back to Shop</button>
-        </Link>
         <div className="form-container">
           <form onSubmit={this.handleSubmit}></form>
         </div>

@@ -2,13 +2,21 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import { clearCart } from "../../redux/actions/cartAction";
-import { Link } from "react-router-dom";
 
 import CartItems from "../CartItems/CartItems.component";
+import CheckoutPopUp from "../CheckoutPopUp/CheckoutPopUp.component";
 
 import "./CartView.component.css";
 
 export class CartView extends Component {
+  constructor() {
+    super();
+    this.setButtonPopUp = this.setButtonPopUp.bind(this);
+    this.state = {
+      buttonPopUp: false,
+    };
+  }
+
   totalPrice(cartItems) {
     let total = 0;
     for (let x in cartItems) {
@@ -17,6 +25,12 @@ export class CartView extends Component {
       total += totalPerItem;
     }
     return total.toFixed(2);
+  }
+
+  setButtonPopUp(boolean) {
+    this.setState({
+      buttonPopUp: boolean,
+    });
   }
 
   render() {
@@ -38,12 +52,17 @@ export class CartView extends Component {
           <button
             disabled={cartItems.length === 0}
             className="cart-button-checkout"
+            onClick={() => this.setButtonPopUp(true)}
           >
-            <Link className="link" to="/checkout">
-              Process To Checkout
-            </Link>
+            Process To Checkout
           </button>
         </div>
+        <CheckoutPopUp
+          trigger={this.state.buttonPopUp}
+          setTrigger={this.setButtonPopUp}
+        >
+          <h3>Pop Up</h3>
+        </CheckoutPopUp>
       </div>
     );
   }
