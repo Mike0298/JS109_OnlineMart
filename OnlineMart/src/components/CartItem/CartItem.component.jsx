@@ -12,7 +12,7 @@ import "./CartItem.component.css";
 export class CartItem extends Component {
   render() {
     const {
-      id,
+      product_id,
       name,
       price,
       unit_quantity,
@@ -22,7 +22,7 @@ export class CartItem extends Component {
       clearItemFromCart,
     } = this.props;
     const item = {
-      id: id,
+      product_id: product_id,
       name: name,
       price: price,
       unit_quantity: unit_quantity,
@@ -36,11 +36,11 @@ export class CartItem extends Component {
         </div>
         <div className="cart-item-quantity">
           <button onClick={() => removeItem(item)} className="cart-item-icon">
-            <i class="icon ion-md-arrow-dropleft"></i>
+            <i className="icon ion-md-arrow-dropleft"></i>
           </button>
           <p className="quantity">{quantity}</p>
           <button onClick={() => addItem(item)} className="cart-item-icon">
-            <i class="icon ion-md-arrow-dropright"></i>
+            <i className="icon ion-md-arrow-dropright"></i>
           </button>
         </div>
         <div className="cart-item-price">
@@ -51,7 +51,7 @@ export class CartItem extends Component {
             onClick={() => clearItemFromCart(item)}
             className="cart-item-icon"
           >
-            <i class="icon ion-md-close"></i>
+            <i className="icon ion-md-close"></i>
           </button>
         </div>
       </div>

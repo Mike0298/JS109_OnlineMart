@@ -25,7 +25,7 @@ export class ItemView extends Component {
     } = item;
 
     const itemToAdd = {
-      id: product_id,
+      product_id: product_id,
       name: product_name,
       price: unit_price,
       unit_quantity: unit_quantity,

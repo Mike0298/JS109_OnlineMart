@@ -2,7 +2,7 @@ import React from "react";
 
 import "./CheckoutPopUp.component.css";
 
-import CustomerForm from "../CustomerForm/CustomerForm.compoenent";
+import CustomerForm from "../CustomerForm/CustomerForm.component";
 import CustomerCart from "../CustomerCart/CustomerCart.component";
 
 function CheckoutPopUp(props) {
@@ -15,7 +15,7 @@ function CheckoutPopUp(props) {
               Back to Shop
             </button>
           </div>
-          <CustomerForm />
+          <CustomerForm setTrigger={props.setTrigger} />
         </div>
         <div className="customer-cart">
           <CustomerCart />

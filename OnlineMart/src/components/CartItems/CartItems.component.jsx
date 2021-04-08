@@ -18,8 +18,12 @@ export class CartItems extends Component {
           <p>Price</p>
           <p>Remove</p>
         </div>
-        {cartItems.map(({ id, ...otherProperties }) => (
-          <CartItem key={id} id={id} {...otherProperties} />
+        {cartItems.map(({ product_id, ...otherProperties }) => (
+          <CartItem
+            key={product_id}
+            product_id={product_id}
+            {...otherProperties}
+          />
         ))}
       </div>
     );

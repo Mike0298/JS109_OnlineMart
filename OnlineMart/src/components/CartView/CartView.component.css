@@ -49,11 +49,6 @@
   margin-right: 2rem;
 }
 
-.cart-container .cart-button .cart-button-checkout .link {
-  text-decoration: none;
-  color: #fff;
-}
-
 .cart-container .cart-button button:disabled {
-  opacity: 0;
+  color: grey;
 }
