@@ -22,6 +22,7 @@ export class ItemView extends Component {
       product_name,
       unit_price,
       unit_quantity,
+      image_url,
     } = item;
 
     const itemToAdd = {
@@ -36,10 +37,7 @@ export class ItemView extends Component {
         <div className="view-header">{product_name}</div>
         <div className="view-content">
           <div className="product-image">
-            <img
-              src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.independent.co.uk%2Fs3fs-public%2Fstyles%2Fstory_large%2Fpublic%2Fthumbnails%2Fimage%2F2015%2F09%2F12%2F21%2F29-fish-fingers-rex.jpg&f=1&nofb=1"
-              alt={product_name}
-            />
+            <img src={image_url} alt={product_name} />
           </div>
           <div className="product-desc">
             <div className="product-id desc-layout">

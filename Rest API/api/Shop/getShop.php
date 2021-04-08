@@ -44,7 +44,8 @@
               'unit_quantity' => $unit_quantity,
               'in_stock' => $in_stock,
               'category' => $category,
-              'sub_category' => $sub_category
+              'sub_category' => $sub_category,
+              'image_url' => $image_url
           );
 
           array_push($shop_arr['products'], $products_item);

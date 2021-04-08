@@ -16,6 +16,7 @@ export default function (state = initialState, action) {
     case ITEM_DESELECTED:
       return {
         ...state,
+        item: {},
         itemSelected: false,
       };
     default:
