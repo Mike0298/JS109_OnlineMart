@@ -120,7 +120,12 @@ export class CustomerForm extends Component {
               <label>Country</label>
             </div>
             <div className="submit-btn">
-              <button type="submit">Complete Order</button>
+              <button
+                disabled={this.props.cart.cartItems.length === 0}
+                type="submit"
+              >
+                Complete Order
+              </button>
             </div>
           </form>
         </div>
