@@ -5,7 +5,7 @@ export const getShop = () => (dispatch) => {
   dispatch({ type: LOADING_SHOP });
   axios
     .get(
-      "https://cors-anywhere.herokuapp.com/http://uts-12441376-ipa1.us-east-1.elasticbeanstalk.com/api/shop/getShop.php"
+      "http://uts-12441376-ipa1.us-east-1.elasticbeanstalk.com/api/shop/getShop.php"
     )
     .then((res) => {
       let shop = mergeShop(res.data);
