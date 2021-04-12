@@ -14,7 +14,7 @@ export class ItemView extends Component {
   }
 
   render() {
-    const { itemSelected, item } = this.props.item;
+    const { itemSelected, item, image_loading } = this.props.item;
 
     const {
       in_stock,
@@ -37,7 +37,14 @@ export class ItemView extends Component {
         <div className="view-header">{product_name}</div>
         <div className="view-content">
           <div className="product-image">
-            <img src={image_url} alt={product_name} />
+            {!image_loading ? (
+              <img src={image_url} alt={product_name} />
+            ) : (
+              <img
+                src="https://bison.usgs.gov/images/spinner2.gif"
+                alt="loading"
+              />
+            )}
           </div>
           <div className="product-desc">
             <div className="product-id desc-layout">
