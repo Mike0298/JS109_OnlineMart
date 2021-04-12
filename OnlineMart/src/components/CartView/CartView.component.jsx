@@ -5,15 +5,18 @@ import { clearCart } from "../../redux/actions/cartAction";
 
 import CartItems from "../CartItems/CartItems.component";
 import CheckoutPopUp from "../CheckoutPopUp/CheckoutPopUp.component";
+import CompletePopUp from "../CompletePopUp/CompletePopUp.component";
 
 import "./CartView.component.css";
 
 export class CartView extends Component {
   constructor() {
     super();
-    this.setButtonPopUp = this.setButtonPopUp.bind(this);
+    this.setButtonPopUpCheckout = this.setButtonPopUpCheckout.bind(this);
+    this.setButtonPopUpComplete = this.setButtonPopUpComplete.bind(this);
     this.state = {
-      buttonPopUp: false,
+      buttonPopUpCheckout: false,
+      buttonPopUpComplete: false,
     };
   }
 
@@ -27,9 +30,15 @@ export class CartView extends Component {
     return total.toFixed(2);
   }
 
-  setButtonPopUp(boolean) {
+  setButtonPopUpCheckout(boolean) {
     this.setState({
-      buttonPopUp: boolean,
+      buttonPopUpCheckout: boolean,
+    });
+  }
+
+  setButtonPopUpComplete(boolean) {
+    this.setState({
+      buttonPopUpComplete: boolean,
     });
   }
 
@@ -52,17 +61,20 @@ export class CartView extends Component {
           <button
             disabled={cartItems.length === 0}
             className="cart-button-checkout"
-            onClick={() => this.setButtonPopUp(true)}
+            onClick={() => this.setButtonPopUpCheckout(true)}
           >
             Process To Checkout
           </button>
         </div>
         <CheckoutPopUp
-          trigger={this.state.buttonPopUp}
-          setTrigger={this.setButtonPopUp}
-        >
-          <h3>Pop Up</h3>
-        </CheckoutPopUp>
+          triggerCheckout={this.state.buttonPopUpCheckout}
+          setTriggerCheckout={this.setButtonPopUpCheckout}
+          setTriggerComplete={this.setButtonPopUpComplete}
+        />
+        <CompletePopUp
+          triggerComplete={this.state.buttonPopUpComplete}
+          setTriggerComplete={this.setButtonPopUpComplete}
+        />
       </div>
     );
   }

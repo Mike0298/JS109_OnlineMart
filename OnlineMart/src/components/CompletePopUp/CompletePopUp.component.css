@@ -1,0 +1,28 @@
+.complete-popup-container {
+  width: 20%;
+  height: 20%;
+  background-color: #30384b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+}
+
+.complete-popup-container .complete-popup-dialog {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.complete-popup-container .complete-dismiss button {
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #283042;
+  border-radius: 4rem;
+  padding: 1rem;
+  border: 0.2rem solid #212838;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}

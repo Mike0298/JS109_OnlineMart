@@ -26,8 +26,13 @@ export class CustomerForm extends Component {
   };
 
   handleSubmit = (event) => {
-    const { clearCart, setTrigger, cart } = this.props;
     event.preventDefault();
+    const {
+      clearCart,
+      setTriggerCheckout,
+      setTriggerComplete,
+      cart,
+    } = this.props;
     let data = {
       cart: [...cart.cartItems],
     };
@@ -45,8 +50,8 @@ export class CustomerForm extends Component {
       .then((res) => {
         console.log(res.data.message);
         clearCart();
-        setTrigger(false);
-        alert("Your order has been placed");
+        setTriggerComplete(true);
+        setTriggerCheckout(false);
       })
       .catch((err) => {
         console.log(err.res.data);
