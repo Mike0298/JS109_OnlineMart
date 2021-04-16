@@ -1,7 +1,7 @@
 <?php 
   class Database {
     // DB Params
-    private $host = 'aa1tu0gu6zc79hn.ci1zdw3byjv0.us-east-1.rds.amazonaws.com';
+    private $host = 'aa118ahl4qwnnbs.cxo3mdqsapgz.us-east-1.rds.amazonaws.com';
     private $db_name = 'assignment1';
     private $username = 'uts';
     private $password = 'internet';

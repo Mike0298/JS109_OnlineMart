@@ -11,7 +11,7 @@ CREATE TABLE `products` (
   `in_stock` int(10) unsigned DEFAULT NULL,
   `category_id` int(10) unsigned DEFAULT NULL,
   `sub_category_id` int(10) unsigned DEFAULT NULL,
-  `image_url` varchar(2083) DEFAULT NULL,
+  `image_url` varchar(2083) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- ----------------------------

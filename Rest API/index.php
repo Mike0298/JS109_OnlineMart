@@ -5,10 +5,10 @@
     <title>My first page</title>
 </head>
 <body>
-    <h1>Welcome to UTS Internet Programing Assignment 1 API</h1>
-    <h2>By 12441376</h2>
-    <h3>Usage</h3>
-    <p> - to get the shop, use GET request at '/api/shop/getShop.php'</p>
-    <p> - to get the server php info, visit '/info.php' </p>
+    <h1>Welcome to OnlineMart API</h1>
+    <h2>By 12441376 of UTS</h2>
+    <h3>Links</h3>
+    <a href="http://onlinemart-12441376.herokuapp.com/">Online Mart Website</a>
+    <a href="https://github.com/Mike0298/OnlineMart"> Project Files </a>
 </body>
 </html>
