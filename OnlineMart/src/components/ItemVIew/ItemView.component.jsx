@@ -6,6 +6,7 @@ import { deselectItem } from "../../redux/actions/itemAction";
 import { addItem } from "../../redux/actions/cartAction";
 
 import "./ItemView.component.css";
+import loadingIcon from "../../assets/images/spinner2.gif";
 
 export class ItemView extends Component {
   addItemToCart(itemToAdd, props) {
@@ -40,10 +41,7 @@ export class ItemView extends Component {
             {!image_loading ? (
               <img src={image_url} alt={product_name} />
             ) : (
-              <img
-                src="https://bison.usgs.gov/images/spinner2.gif"
-                alt="loading"
-              />
+              <img src={loadingIcon} alt="loading" />
             )}
           </div>
           <div className="product-desc">

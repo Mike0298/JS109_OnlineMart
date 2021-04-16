@@ -43,7 +43,7 @@ export class CustomerForm extends Component {
     };
     axios
       .post(
-        "http://uts-12441376-ipa1.us-east-1.elasticbeanstalk.com/api/shop/reduceStock.php",
+        "http://api-onlinemart-12441376.us-east-1.elasticbeanstalk.com/api/shop/reduceStock.php",
         data,
         config
       )
@@ -54,7 +54,7 @@ export class CustomerForm extends Component {
         setTriggerCheckout(false);
       })
       .catch((err) => {
-        console.log(err.res.data);
+        console.log(err);
         alert("Something Went Wrong");
       });
   };

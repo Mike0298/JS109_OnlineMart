@@ -14,7 +14,7 @@ export const setItem = (item) => (dispatch) => {
     type: SET_ITEM,
     payload: data,
   });
-  setTimeout(() => dispatch({ type: IMAGE_LOADED }), 2000);
+  setTimeout(() => dispatch({ type: IMAGE_LOADED }), 1000);
 };
 
 export const deselectItem = () => (dispatch) => {
