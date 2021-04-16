@@ -5,7 +5,7 @@ export const getShop = () => (dispatch) => {
   dispatch({ type: LOADING_SHOP });
   axios
     .get(
-      "http://api-onlinemart-12441376.us-east-1.elasticbeanstalk.com/api/shop/getShop.php"
+      "http://onlinemart-api-12441376.us-east-1.elasticbeanstalk.com/api/shop/getShop.php"
     )
     .then((res) => {
       let shop = mergeShop(res.data);

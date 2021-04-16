@@ -43,7 +43,7 @@ export class CustomerForm extends Component {
     };
     axios
       .post(
-        "http://api-onlinemart-12441376.us-east-1.elasticbeanstalk.com/api/shop/reduceStock.php",
+        "http://onlinemart-api-12441376.us-east-1.elasticbeanstalk.com/api/shop/reduceStock.php",
         data,
         config
       )
