@@ -3,6 +3,7 @@ import axios from "axios";
 
 import { connect } from "react-redux";
 import { clearCart } from "../../redux/actions/cartAction";
+import { isEmail } from "../../assets/utils/validation";
 
 import "./CustomerForm.component.css";
 
@@ -27,36 +28,40 @@ export class CustomerForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const {
-      clearCart,
-      setTriggerCheckout,
-      setTriggerComplete,
-      cart,
-    } = this.props;
-    let data = {
-      cart: [...cart.cartItems],
-    };
-    let config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    axios
-      .post(
-        "http://onlinemart-api-12441376.us-east-1.elasticbeanstalk.com/api/shop/reduceStock.php",
-        data,
-        config
-      )
-      .then((res) => {
-        console.log(res.data.message);
-        clearCart();
-        setTriggerComplete(true);
-        setTriggerCheckout(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        alert("Something Went Wrong");
-      });
+    if (!isEmail(this.state.email)) {
+      alert("please enter an email");
+    } else {
+      const {
+        clearCart,
+        setTriggerCheckout,
+        setTriggerComplete,
+        cart,
+      } = this.props;
+      let data = {
+        cart: [...cart.cartItems],
+      };
+      let config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      axios
+        .post(
+          "http://onlinemart-api-12441376.us-east-1.elasticbeanstalk.com/api/shop/reduceStock.php",
+          data,
+          config
+        )
+        .then((res) => {
+          console.log(res.data.message);
+          clearCart();
+          setTriggerComplete(true);
+          setTriggerCheckout(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Something Went Wrong");
+        });
+    }
   };
 
   render() {
@@ -76,7 +81,7 @@ export class CustomerForm extends Component {
             </div>
             <div className="form-detail">
               <input
-                type="email"
+                type="text"
                 name="email"
                 value={this.state.email}
                 onChange={this.handleChange}

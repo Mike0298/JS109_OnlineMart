@@ -38,6 +38,11 @@
   transition: 0.5s;
 }
 
+.customer-form .form-container .form-detail label:after {
+  content: "*";
+  color: red;
+}
+
 .customer-form .form-container input:focus ~ label,
 .customer-form .form-container input:valid ~ label {
   top: -20px;
