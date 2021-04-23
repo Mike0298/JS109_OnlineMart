@@ -23,7 +23,7 @@
             <div class="button">
               <div class="onlinemart">
                 <img
-                  src="https://www.freeiconspng.com/uploads/shopping-cart-icon-5.png"
+                  src="./assets/cart.png"
                   alt="assignment"
                 />
                 <div class="button-content">Assessment 1 Link</div>
@@ -34,7 +34,7 @@
             ><div class="button">
               <div class="github">
                 <img
-                  src="https://image.flaticon.com/icons/png/512/25/25231.png"
+                  src="./assets/github.png"
                   alt="github"
                 />
                 <div class="button-content">Assessment 1 Files</div>
